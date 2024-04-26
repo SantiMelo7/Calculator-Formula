@@ -5,11 +5,27 @@
 :root {
   background: linear-gradient(to right, rgb(15 23 42), #1e293b);
   opacity: 1;
+  --select-color: pink;
+  --input-main-color: orange;
+  --input-text-color: rgb(17 24 39);
+  --input-placeholder-color: #000;
+  --color-white: rgb(241 245 249);
+  --color-main-title-page: #b89769;
+  --color-modal-fixed: rgb(0 0 0 / 0.7);
+  --color-text-error: rgb(239 68 68);
+  --color-text-result: rgb(34 197 94);
+  --bg-button-clean: rgb(202, 73, 112);
+  --bg-button-submit: rgb(136, 206, 131);
+  --color-button-submit-text: #1b1b1b;
+  --bg-button-redirect: rgb(45 212 191);
+  --bg-button-redirect-hover: rgb(20 184 166);
+  --color-search-title: rgb(147 197 253);
+  --color-sub-title-home: rgb(255 148 39);
 }
 
 form {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 div.select-value {
@@ -19,9 +35,9 @@ div.select-value {
 }
 
 select {
-  background: pink;
+  background: var(--select-color);
   border: none;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   position: absolute;
   cursor: pointer;
   @media (min-width: 300px) {
@@ -37,8 +53,8 @@ select {
 input[type="tel"] {
   display: flex;
   justify-content: center;
-  border-radius: 8px;
-  color: rgb(17 24 39);
+  border-radius: 0.5rem;
+  color: var(--input-text-color);
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -46,7 +62,7 @@ input[type="tel"] {
   border-style: none;
   position: relative;
   padding: 0.75rem;
-  background: orange;
+  background: var(--input-main-color);
   @media (min-width: 300px) {
     width: 45vh;
   }
@@ -76,18 +92,18 @@ div.unist-form-responsive {
     align-items: end;
     position: relative;
     bottom: 25px;
-    left: 10px;
+    left: 0.625rem;
   }
 }
 
 input::placeholder {
-  color: #000;
+  color: var(--input-placeholder-color);
 }
 
 label {
   font-size: 1.5rem;
   line-height: 2rem;
-  color: rgb(241 245 249);
+  color: var(--color-white);
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
@@ -106,32 +122,32 @@ div.section-page {
 }
 
 h1.title-home {
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 800;
   text-align: center;
-  margin-top: 30px;
-  color: #b89769;
+  margin-top: 1.875rem;
+  color: var(--color-main-title-page);
 }
 
 h1.title-count {
   @media (min-width: 300px) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   @media (min-width: 1024px) {
-    font-size: 48px;
+    font-size: 3rem;
   }
   line-height: 1;
   font-weight: 800;
   text-align: center;
-  margin-top: 30px;
-  color: #b89769;
+  margin-top: 1.875rem;
+  color: var(--color-main-title-page);
 }
 
 h2.subTitle-home {
   font-size: 1.875rem;
   line-height: 2.25rem;
-  color: rgb(255 148 39);
+  color: var(--color-sub-title-home);
   font-weight: 700;
 }
 
@@ -141,7 +157,7 @@ img.ley-de-kir {
     right: 0px;
   }
   @media (min-width: 1024px) {
-    right: 20px;
+    right: 1.25rem;
   }
 }
 
@@ -149,11 +165,11 @@ div.section-images {
   display: flex;
   @media (min-width: 300px) {
     flex-direction: column;
-    margin-top: 36px;
+    margin-top: 2.25rem;
   }
   @media (min-width: 1024px) {
     flex-direction: row;
-    gap: 40px;
+    gap: 2.5rem;
   }
 }
 
@@ -161,23 +177,23 @@ div.delete-0-ley-de-kirchhoff {
   margin-left: auto;
   margin-right: auto;
   @media (min-width: 300px) {
-    width: 250px;
+    width: 15.625rem;
   }
   @media (min-width: 1024px) {
-    width: 200px;
+    width: 12.5rem;
   }
 }
 
 img.img-count {
   position: relative;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   @media (min-width: 300px) {
-    width: 350px;
+    width: 21.875rem;
   }
   @media (min-width: 1024px) {
-    width: 500px;
-    bottom: 60px;
-    left: 70px;
+    width: 31.25rem;
+    bottom: 3.75rem;
+    left: 4.375rem;
   }
   &:hover {
     transform: scale(1.1);
@@ -185,12 +201,12 @@ img.img-count {
 }
 
 img.img-x-form {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   @media (min-width: 300px) {
-    width: 380px;
+    width: 23.75rem;
   }
   @media (min-width: 1024px) {
-    width: 480px;
+    width: 30rem;
   }
 }
 
@@ -202,8 +218,8 @@ a.link-materia {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 70px;
-  font-size: 20px;
+  margin-bottom: 4.375rem;
+  font-size: 1.25rem;
   cursor: pointer;
   &:hover {
     opacity: 0.7;
@@ -211,27 +227,27 @@ a.link-materia {
 }
 img.img-home {
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   opacity: 0.45;
   height: 65%;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   @media (min-width: 300px) {
-    width: 300px;
+    width: 18.75rem;
   }
   @media (min-width: 768px) {
-    width: 400px;
+    width: 25rem;
   }
   @media (min-width: 1024px) {
-    width: 500px;
+    width: 31.25rem;
   }
 }
 
 span.title-home-box {
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 1;
   font-weight: 800;
   position: absolute;
-  color: #fff;
+  color: var(--color-white);
   z-index: 50;
 }
 
@@ -240,14 +256,14 @@ section.container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1536px;
+  max-width: 96rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2.5rem;
 }
 
 h2.search-title {
-  color: rgb(147 197 253);
+  color: var(--color-search-title);
   font-weight: 800;
   text-align: center;
   font-size: 1.875rem;
@@ -256,7 +272,7 @@ h2.search-title {
 
 a.redirect-home {
   margin-top: 1.25rem;
-  background-color: rgb(45 212 191);
+  background-color: var(--bg-button-redirect);
   color: #333;
   font-weight: 800;
   width: 16rem;
@@ -268,8 +284,8 @@ a.redirect-home {
   text-decoration: none;
   &:hover {
     transform: scaleY(1.05);
-    background-color: rgb(20 184 166);
-    color: white;
+    background-color: var(--bg-button-redirect-hover);
+    color: var(--color-white);
   }
 }
 
@@ -286,19 +302,19 @@ div.container-content {
 }
 
 button.calculadora-button-cero {
-  border-radius: 50px;
-  color: white;
+  border-radius: 3.125rem;
+  color: var(--color-white);
   position: absolute;
-  width: 155px;
-  height: 75px;
-  font-size: 35px;
+  width: 9.688rem;
+  height: 4.688rem;
+  font-size: 2.188rem;
   border: none;
 }
 
 div.content-center {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5px;
+  margin-top: 0.313rem;
   @media (min-width: 300px) {
     display: flex;
     flex-direction: column;
@@ -312,18 +328,18 @@ div.content-center {
 }
 
 button.style-calculator {
-  border-radius: 50px;
+  border-radius: 3.125rem;
   font-size: 2.25rem;
   line-height: 2.5rem;
-  width: 75px;
-  height: 75px;
-  color: rgb(255 255 255);
+  width: 4.688rem;
+  height: 4.688rem;
+  color: var(--color-white);
   border: none;
 }
 
 div.container-calculator {
-  border-width: 1px;
-  width: 450px;
+  border-width: 0.063rem;
+  width: 28.125rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.75rem;
@@ -333,7 +349,7 @@ div.container-calculator {
 h2.formula {
   font-size: 2.25rem;
   line-height: 2.5rem;
-  color: rgb(255 255 255);
+  color: var(--color-white);
   text-align: right;
   padding-right: 4rem;
   margin-top: 1rem;
@@ -346,7 +362,7 @@ h4.prevNumber {
   text-align: right;
   padding-right: 5rem;
   position: relative;
-  top: 12px;
+  top: 0.75rem;
 }
 
 div.content-container-calculator {
@@ -385,8 +401,8 @@ div.container-buttons {
 }
 
 button.submit {
-  color: #1b1b1b;
-  background-color: rgb(136, 206, 131);
+  color: var(--color-button-submit-text);
+  background-color: var(--bg-button-submit);
   width: 14rem;
   margin-left: auto;
   margin-right: auto;
@@ -402,8 +418,8 @@ button.submit {
 }
 
 button.clean {
-  color: #fff;
-  background-color: rgb(202, 73, 112);
+  color: var(--color-white);
+  background-color: var(--bg-button-clean);
   width: 14rem;
   margin-left: auto;
   margin-right: auto;
@@ -426,13 +442,13 @@ div.validation-css {
 img.formula-img {
   border-radius: 6px;
   @media (min-width: 300px) {
-    width: 350px;
+    width: 21.875rem;
     position: relative;
-    bottom: 40px;
+    bottom: 2.5rem;
   }
   @media (min-width: 1024px) {
-    width: 500px;
-    margin-top: 100px;
+    width: 31.25rem;
+    margin-top: 6.25rem;
   }
   position: relative;
   right: 1rem;
@@ -442,59 +458,59 @@ div.container-img-logo {
   display: flex;
   flex-direction: row;
   position: relative;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   z-index: 99999;
   @media (min-width: 300px) {
-    gap: 10px;
+    gap: 0.625rem;
   }
   @media (min-width: 1024px) {
-    gap: 80px;
+    gap: 5rem;
   }
 }
 
 img.logo-materies {
   position: relative;
-  border-radius: 25px;
+  border-radius: 1.563rem;
   animation: updown 3s linear infinite;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   @media (min-width: 300px) {
-    width: 180px;
+    width: 11.25rem;
   }
   @media (min-width: 1024px) {
-    width: 250px;
+    width: 15.625rem;
   }
 }
 
 p.result {
   text-align: center;
-  color: rgb(34 197 94);
+  color: var(--color-text-result);
   font-size: 1.8rem;
   line-height: 2rem;
   font-weight: 700;
   position: relative;
-  top: 2px;
+  top: 0.313rem;
 }
 
 p.error {
-  color: rgb(239 68 68);
+  color: var(--color-text-error);
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   position: relative;
-  left: 40px;
+  left: 2.5rem;
 }
 
 @keyframes updown {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(-1.25rem);
     transform: rotate(-20deg);
   }
   50% {
-    transform: translateY(20px);
+    transform: translateY(1.25rem);
     transform: rotate(20deg);
   }
   100% {
-    transform: translateY(-20px);
+    transform: translateY(-1.25rem);
     transform: rotate(-20deg);
   }
 }
@@ -515,4 +531,34 @@ div.md {
   @media (min-width: 1024px) {
     display: flex;
   }
+}
+
+.modal {
+  position: fixed;
+  background-color: var(--color-modal-fixed);
+  bottom: 0px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2.5rem;
+  margin-top: 0.75rem;
+}
+
+h1.title-modal {
+  color: var(--color-white);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1536px;
+  column-gap: 2.5rem;
 }
