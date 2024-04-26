@@ -31,21 +31,19 @@ export function ButtonsSubmit({ cleanUp, result, unit }) {
       </Button>
       {result ? (
         <Modal
-          className="fixed md:bg-black/70 bottom-0"
+          className="modal"
           show={modalIsOpen}
           onClose={() => setModalIsOpen(false)}
         >
-          <Modal.Body className="mt-3 flex md:flex-row sm:flex-col gap-x-10">
+          <Modal.Body className="modal-body">
             {/*De esta manera mostramos el resultado, si existe ese valor damos esto */}
-            <h1 className="uppercase text-3xl text-white font-extrabold">
-              El resultado es :
-            </h1>
+            <h1 className="title-modal">El resultado es :</h1>
             <p className="result">
               {result}
               {unit}
             </p>
           </Modal.Body>
-          <Modal.Footer className="flex flex-col justify-center items-center max-w-screen-2xl gap-x-10">
+          <Modal.Footer className="modal-footer">
             <Button className="submit" onClick={() => setModalIsOpen(false)}>
               Ok, gracias
             </Button>
